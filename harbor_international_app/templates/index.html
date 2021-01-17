@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block title %}
+    <title>Harbor International LLC</title>
+    {% endblock %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css" />
+    <link rel="stylesheet" href="{% static 'js/app.js' %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  </head>
+
+  <body>
+    <div class="body-container">
+      <header role="header" class="header-container">
+        <ul class="nav-bar">
+          <li class="home nav-bar-item"><a href="index.html">HOME</a></li>
+
+          <li class="locations nav-bar-item">
+            <a href="/user/login">LOG IN</a>
+          </li>
+        </ul>
+      </header>
+
+      <section class="welcome-title">
+        <div id="welcome-container">
+          <p>WELCOME</p>
+          <p>TO</p>
+          <p>HARBOR INTERNATIONAL LLC</p>
+        </div>
+      </section>
+      <section class="subjects-taught-container">
+        <ul class="subjects-taught">
+          <li class="math subjects-taught-item">
+            <a href="index.html">MATH</a>
+          </li>
+          <li class="reading subjects-taught-item">
+            <a href="who_we_are.html">READING</a>
+          </li>
+          <li class="science subjects-taught-item">
+            <a href="images.html">SCIENCE</a>
+          </li>
+        </ul>
+      </section>
+      <section class="enter">
+        <p href="who_we_are.html" id="enter-container">
+          SIGN UP
+          <a></a>
+        </p>
+        <div id="enter-door"></div>
+      </section>
+      <footer class="index">
+        <p>Some Text</p>
+      </footer>
+    </div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

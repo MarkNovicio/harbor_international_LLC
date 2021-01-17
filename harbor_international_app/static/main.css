@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+div.body-container {
+  background: url(/static/images/Lighthouse-Home-Background.jpg) no-repeat
+    center center fixed;
+  background-size: cover;
+}
+
+div.overlap-container {
+  background: url(../images/lighthouse-staircase.jpg) no-repeat center center
+    fixed;
+  background-size: cover;
+}
+div.who-we-are-container {
+  background-color: rgba(94, 94, 94, 0.6);
+  z-index: 2;
+}
+ul.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+ul.nav-bar li {
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.nav-bar li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-bar li a:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+div.body-container section.welcome-title {
+  color: #fff;
+  height: calc(63vh);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#welcome-container {
+  margin-top: 120px;
+}
+.welcome-title p {
+  display: block;
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+}
+
+section.enter {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  align-items: center;
+}
+section.enter p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 3em;
+  margin-right: 50px;
+  margin-left: 70px;
+}
+
+div#enter-door {
+  width: 20px;
+  height: 80px;
+  margin-bottom: 20px;
+  background-color: rgba(193, 66, 66, 0.4);
+  display: none;
+}
+.subjects-taught-container ul {
+  position: relative;
+}
+ul.subjects-taught {
+  display: flex;
+  justify-content: space-around;
+}
+
+li.subjects-taught-item {
+  list-style-type: none;
+  width: 150px;
+  height: 200px;
+  border: 3px solid #000;
+  text-align: center;
+  margin: 100px;
+  font-weight: bold;
+}
+
+li.subjects-taught-item a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+li.subjects-taught-item:hover {
+  -webkit-transition: background-color 1s ease;
+  -moz-transition: background-color 1s ease;
+  -o-transition: background-color 1s ease;
+  transition: background-color 1s ease;
+  color: black;
+  background-color: rgba(86, 178, 231, 0.3);
+  font-weight: 800;
+  /*font-size: 20px;*/
+}
+
+footer.index {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+footer.index p {
+  position: relative;
+  bottom: 0;
+}
+
+div.who-we-are-body-container h2 {
+  text-align: center;
+  color: #fff;
+  padding-top: 30px;
+}
+
+div.who-we-are-body-container {
+  padding-top: 45px;
+}
+
+div.who-we-are-body-container p.text {
+  padding: 15px 0;
+  color: #fff;
+  margin: 20px 180px;
+  font-size: 1.5em;
+  text-align: justify;
+}
+
+div.who-we-are-body-container img.world-map-image {
+  margin-left: 180px;
+  margin-right: 25px;
+  margin-bottom: 30px;
+  float: left;
+  width: 400px;
+  height: 300px;
+}
+
+footer.who-we-are-footer {
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(155, 155, 155, 0.6);
+}
+
+div.service-button {
+  color: #fff;
+  font-size: 3.5em;
+}
+
+div.testimonial-container h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+div.testimonial-container p {
+  margin: 40px 100px 20px 100px;
+}
+
+section.accomplishments-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 150px;
+  height: 150px;
+}
+
+section.accomplishments-container div.accomplishment-item {
+  background-color: rgba(94, 94, 94, 0.6);
+  width: 10%;
+  height: 15px;
+  text-align: center;
+  padding: 5px 0;
+  color: #fff;
+}
+
+section.testimonial-container-parent {
+  margin: 50px auto;
+  width: 30%;
+  height: 560px;
+  border: 1px solid rgb(179, 177, 177);
+}
+
+div.testimonial-header {
+  border-bottom: 1px solid rgb(179, 177, 177);
+  height: 80px;
+  text-align: center;
+  font-size: 2.1em;
+  color: #fff;
+}
+
+div.name-location-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+div.name-container,
+div.location-container {
+  font-size: 1.8em;
+}
+
+i.fa-quote-left {
+  margin-left: 20px;
+}
+div.message-container {
+  margin: 15px 20px 15px 20px;
+  font-size: 2em;
+}
+
+i.fa-quote-right {
+  margin-bottom: 70px;
+  margin-left: 20px;
+}
+
+.prev-next-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+section.photo-container {
+  width: 75%;
+  height: 400px;
+  border: 1px solid gray;
+  margin: auto;
+}
+div#testimonial-body {
+  color: #fff;
+  font-size: 1.8fem;
+}
+p#comment-header {
+  color: blue;
+}
+p#comment-body {
+  color: red;
+  margin-top: 30px;
+  margin-left: 15px;
+  font-size: 1.9em;
+}
+
+div.photo-content {
+  color: #fff;
+  font-size: 1.9em;
+  position: relative;
+  bottom: 0px;
+}
