@@ -15,9 +15,10 @@
     />
 
     <link rel="stylesheet" type="text/css" href="../static/main.css" />
+    <link rel="stylesheet" href="{% static 'js/app.js' %}" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <div class="registration-container">
         <h1>Registration</h1>
         <div class="messages-container">
@@ -50,7 +51,7 @@
             placeholder="Confirm Password"
           />
 
-          <button>Sign Up</button>
+          <button class="gost" id="signUp">Sign Up</button>
         </form>
       </div>
       <div class="form-container sign-in-container">
@@ -59,7 +60,7 @@
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
           <a href="#">Forgot your password?</a>
-          <button>Sign In</button>
+          <button class="gost" id="signIn">Sign In</button>
         </form>
       </div>
       <div class="overlay-container">
