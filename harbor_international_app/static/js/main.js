@@ -3,7 +3,7 @@
 let parentCommentContainer = document.getElementsByClassName(
   "testimonial-body"
 );
-*/
+
 
 $("#enter-container").hover(
   function () {
@@ -15,7 +15,7 @@ $("#enter-container").hover(
     $(door).hide();
   }
 );
-
+*/
 let imageArray = [
   {
     image: "assets/images/mountains.jpg",
