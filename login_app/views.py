@@ -9,14 +9,14 @@ def index(request):
 
 def create_registration(request):
     if request.method == 'GET':
-        return redirect('/')
+        return render(request, "login.html")
     errors = User.objects.basic_validator(request.POST)
 
     if len(errors) > 0:
         for key, value in errors.items():
             messages.error(request, value)
         print(errors)
-        return redirect('/')
+        return render(request, "login.html")
     
     else:
         pw_hash = bcrypt.hashpw(request.POST['password'].

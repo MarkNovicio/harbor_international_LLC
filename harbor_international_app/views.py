@@ -7,3 +7,5 @@ def index(request):
 
     return render(request, "index.html")
 
+def math_courses(request):
+    return render(request, "math.html")
