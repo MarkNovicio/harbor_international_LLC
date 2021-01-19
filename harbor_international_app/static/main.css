@@ -62,12 +62,13 @@ section.enter {
   height: 100px;
   align-items: center;
 }
-section.enter p {
+section.enter a {
   color: #fff;
   font-weight: bold;
   font-size: 3em;
   margin-right: 50px;
   margin-left: 70px;
+  text-decoration: none;
 }
 
 div#enter-door {
