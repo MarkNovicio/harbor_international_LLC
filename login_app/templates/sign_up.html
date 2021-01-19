@@ -17,8 +17,9 @@
     <link rel="stylesheet" type="text/css" href="../static/main.css" />
   </head>
   <body>
-    <div id="container">
-      <div id="registration-container">
+    <div class="container">
+      <div class="registration-container">
+        <h1>Registration</h1>
         <div class="messages-container">
           {% if messages %}
           <ul class="messages">
@@ -30,23 +31,55 @@
           </ul>
           {% endif %}
         </div>
-
-        <h2>Registration</h2>
+      </div>
+      <div class="form-container registration-form-container">
         <form action="/registration/create" method="POST">
           {% csrf_token %}
-          <label for="first_name">First Name:</label>
-          <input type="text" name="first_name" /> <br />
-          <label for="last_name">Last Name:</label>
-          <input type="text" name="last_name" /> <br />
-          <label for="email">Email</label>
-          <input type="email" name="email" /> <br />
-          <label for="password">Password:</label>
-          <input type="password" name="password" /> <br />
-          <label for="confirm_pw">Confirm Password:</label>
-          <input type="password" name="confirm_pw" /> <br />
-          <input type="submit" value="Register" />
+
+          <input type="text" name="first_name" placeholder="First Name" />
+
+          <input type="text" name="last_name" placeholder="Last Name" />
+
+          <input type="email" name="email" placeholder="Email" />
+
+          <input type="password" name="password" placeholder="Password" />
+
+          <input
+            type="password"
+            name="confirm_pw"
+            placeholder="Confirm Password"
+          />
+
+          <button>Sign Up</button>
         </form>
       </div>
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <h1>Sign in</h1>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <a href="#">Forgot your password?</a>
+          <button>Sign In</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
       <div id="right-container">
         <h2>Login</h2>
         <form action="/user/login" method="POST">
@@ -58,6 +91,6 @@
           <input type="submit" value="Log In" />
         </form>
       </div>
-    </div>
+      -->
   </body>
 </html>
