@@ -14,8 +14,12 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" type="text/css" href="../static/main1.css" />
-    <link rel="stylesheet" href="{% static '../static/js/main.js' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '../static/main1.css' %}"
+    />
+    <script src=" {% static '../static/js/main1.js' %}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   </head>
@@ -60,7 +64,7 @@
         </ul>
       </section>
       <section class="enter">
-        <a href="/user/registration"><p id="enter-container">SIGN UP</p></a>
+        <a href="/user/signup"><p id="enter-container">SIGN UP</p></a>
       </section>
       <footer class="index">
         <p>Some Text</p>

@@ -1,11 +1,24 @@
-const signUpButton = document.getElementById('signUp');
+/*const signUpButton = document.getElementsByClassName('signUp');
+console.log(signUpButton);
 const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+const container = document.getElementsByClassName('container');
+console.log(container)
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
+function addClass(name){
+	console.log(name)
+}
+signUpButton.addEventListener("click", addClass("right-panel-active"));
 
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
+*/
+
+$(document).ready(function() {
+	$('.signUp').click(function(){
+		$('#container').addClass("right-panel-active")
+	})
+	$('.signIn').click(function(){
+		$('#container').removeClass("right-panel-active")
+	})
+})
