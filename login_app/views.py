@@ -17,10 +17,13 @@ def create_registration(request):
     errors = User.objects.basic_validator(request.POST)
 
     if len(errors) > 0:
+        #This code should render the error messages in the
+        # Registration section
         for key, value in errors.items():
             messages.error(request, value)
         print(errors)
-        return redirect('/')
+
+        return redirect('/user/signup')
     
     else:
         pw_hash = bcrypt.hashpw(request.POST['password'].

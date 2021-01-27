@@ -22,3 +22,18 @@ $(document).ready(function() {
 		$('#container').removeClass("right-panel-active")
 	})
 })
+
+function selectedElement() {
+	window.addEventListener(
+	  "click",
+	  function (event) {
+		  
+		if (event.target.classList.contains("ghost")) {
+			console.log("worked")
+			console.log(document.getElementsByClassName("signin-messages-container"))
+		  document.getElementsByClassName("signin-messages-container")[0].style.display = "none"  //getElementsByClassName("signin-messages-container")  
+		  //delivers a nodeList.
+		}
+		  this.console.log("selectedElement works!!")})}
+
+selectedElement()
