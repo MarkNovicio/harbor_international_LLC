@@ -21,13 +21,7 @@
       type="text/css"
       href="{% static '../static/main.css' %}"
     />
-    {% if messages %}
-    <style>
-      .form-border {
-        border: solid 1px red;
-      }
-    </style>
-    {% endif %}
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src=" {% static '../static/js/main.js' %}"></script>
   </head>
@@ -37,9 +31,9 @@
         <form action="/user/login" method="POST">
           <h1>Sign in</h1>
           <div class="signin-messages-container">
-            {% if messages %}
-            <ul class="messages">
-              {% for message in messages %}
+            {% if signin_messages %}
+            <ul class="signin_messages">
+              {% for message in signin_messages %}
               <li {% if message.tags %} class="{{message.tags}}" {% endif %}>
                 {{message}}
               </li>
@@ -48,8 +42,8 @@
             {% endif %}
           </div>
           {% csrf_token %}
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <input type="email" placeholder="Email" name="email" />
+          <input type="password" placeholder="Password" name="password" />
           <a href="#">Forgot your password?</a>
           <button>Sign In</button>
         </form>
@@ -91,15 +85,13 @@
             name="last_name"
             placeholder="Last Name"
           />
-          <input
-            class="form-border"
-            type="email"
-            name="email"
-            placeholder="Email"
-          />
-          <input type="search" name="grade" placeholder="Grade" />
 
-          <select name="grade">
+          {% if new_user.email in messages %}
+          <input class="error" type="email" name="email" placeholder="Email" />
+          {% else %}
+          <input type="email" name="email" placeholder="Email" />
+          {% endif %}
+          <select name="grade" class="form-border grade-dropdown">
             <option value="">Select a grade</option>
             <option value="1">1st Grade</option>
             <option value="2">2nd Grade</option>

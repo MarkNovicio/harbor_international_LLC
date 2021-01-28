@@ -49,11 +49,12 @@ def login_page(request):
     return render(request, "login.html")
 
 def login(request):
+    signin_messages = messages
     if request.method == "GET":
         return redirect('/')
     if not User.objects.authenticate(request.POST['email'], request.POST['password']):
-        messages.error(request, 'Invalid email/password')
-        return redirect('/')
+        signin_messages.error(request, 'Invalid email/password')
+        return redirect('/user/signup')
     else:
         logged_users = User.objects.filter(email=request.POST['email'])
         user = logged_users[0]
@@ -63,7 +64,7 @@ def login(request):
         request.session['email']= user.email
 
         #return render(request, "message_wall.html", context)
-        return redirect('/snacks') #change this redirect to the page you want to redirect
+        return redirect('/courses') #change this redirect to the page you want to redirect
 
 def logout(request):
     del request.session['user_id']
