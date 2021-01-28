@@ -78,6 +78,11 @@ div#enter-door {
   background-color: rgba(193, 66, 66, 0.4);
   display: none;
 }
+.subjects-taught-container {
+  background-color: rgba(94, 94, 94, 0.6);
+  border: 1px solid #fff;
+}
+
 .subjects-taught-container ul {
   position: relative;
 }
@@ -89,16 +94,30 @@ ul.subjects-taught {
 li.subjects-taught-item {
   list-style-type: none;
   width: 150px;
-  height: 200px;
+  height: 150px;
+  border-radius: 50%;
   border: 3px solid #000;
-  margin: 100px;
+  margin: 10px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 li.subjects-taught-item p {
-  text-align: center;
   color: #fff;
   font-size: 1.1em;
+}
+.mid-section {
+  display: flex;
+  justify-content: space-around;
+}
+.tutor-skills {
+  color: #fff;
+  font-size: 3.5em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .subjects-container {
   margin: 10px 0px 0px 3px;
