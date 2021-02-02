@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Harbor International LLC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
       rel="stylesheet"
@@ -12,10 +13,11 @@
     <link
       rel="stylesheet"
       type="text/css"
-      media="screen"
-      href="assets/css/main.css"
+      href="{% static '../static/main1.css' %}"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src=" {% static '../static/js/main1.js' %}"></script>
     <script
       src="https://kit.fontawesome.com/c84a7e6fa4.js"
       crossorigin="anonymous"
@@ -25,13 +27,60 @@
   <body>
     <div class="container">
       <div class="header-courses">
-        <div id="left-header">Snacks</div>
+        <div id="left-header">Harbor International</div>
         <div id="right-header">
-          <p class="user">Welcome {{user.first_name}} {{user.last_name}}</p>
+          <p class="user">Signed in as {{user.email}}</p>
           <p class="user">|</p>
           <a id="log-out" href="/user/logout">log off</a>
         </div>
       </div>
+      <section class="course-container">
+        <div class="course-description">
+          <p>
+            Welcome {{user.first_name}}! You are signed up for {{user.math}}
+          </p>
+        </div>
+        <div>
+          <p>Joined: {{user.created_at}}</p>
+        </div>
+      </section>
+      <section class="left-navigation-container">
+        <div></div>
+      </section>
+      <section class="video-container">
+        <div></div>
+      </section>
+
+      <section class="left-navigation-container">
+        {% if user.math == "Algebra" %}
+        <div class="algebra-container algebra">
+          <h2>{{user.math}}</h2>
+          <div>Algebra content 1</div>
+          <div>Algebra content 2</div>
+        </div>
+        {% elif user.math == "Geometry" %}
+        <div class="geometry-container geometry">
+          <h2>{{user.math}}</h2>
+          <div>Geometry Content 1</div>
+          <div>Geometry Content 2</div>
+        </div>
+        {% elif user.math == "Pre Algebra" %}
+        <div class="geometry-container geometry">
+          <h2>{{user.math}}</h2>
+          <div>Geometry Content 1</div>
+          <div>Geometry Content 2</div>
+        </div>
+        {% else %}
+        <div class="geometry-container geometry">
+          <h2>{{user.math}}</h2>
+          <div>Pre Calculus Content 1</div>
+          <div>Pre Calculus Content 2</div>
+        </div>
+        {% endif %}
+      </section>
+      <section class="content-container">
+
+      </section>
     </div>
   </body>
 </html>

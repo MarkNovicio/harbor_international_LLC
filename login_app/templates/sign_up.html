@@ -91,12 +91,20 @@
           {% else %}
           <input type="email" name="email" placeholder="Email" />
           {% endif %}
+          <select name="math" class="form-border math-dropdown">
+            <option value="">Select Math Option</option>
+            <option value="Pre Algebra">Pre Algebra</option>
+            <option value="Algebra">Algebra</option>
+            <option value="Geometry">Geometry</option>
+            <option value="Pre Calculus">Pre Calculus</option>
+          </select>
+
           <select name="grade" class="form-border grade-dropdown">
-            <option value="">Select a grade</option>
-            <option value="1">1st Grade</option>
-            <option value="2">2nd Grade</option>
-            <option value="3">3rd Grade</option>
-            <option value="4">4th Grade</option>
+            <option value="">Select a Grade</option>
+            <option value="Freshman">Freshman</option>
+            <option value="Sophmore">Sophmore</option>
+            <option value="Junior">Junior</option>
+            <option value="Senior">Senior</option>
           </select>
 
           <input

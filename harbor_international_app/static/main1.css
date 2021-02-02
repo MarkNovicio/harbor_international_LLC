@@ -132,12 +132,13 @@ li.subjects-taught-item:hover {
   -moz-transition: background-color 1s ease;
   -o-transition: background-color 1s ease;
   transition: background-color 1s ease;
-  color: black;
   background-color: rgba(86, 178, 231, 0.3);
-  font-weight: 800;
   /*font-size: 20px;*/
 }
-
+li.subjects-taught-item p:hover {
+  font-size: 1.8em;
+  font-weight: bolder;
+}
 footer.index {
   height: 200px;
   width: 100%;

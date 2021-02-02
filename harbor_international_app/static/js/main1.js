@@ -59,6 +59,7 @@ function establishComments() {
   setParentTestimonials();
 }
 */
+/*
 let parentCommentContainer = document.getElementById("testimonial-body");
 
 function loopThroughContent() {
@@ -91,7 +92,7 @@ function loopThroughContent() {
     //setImage(currentImage);
     console.log("works");
   });
-
+*/
   $(".prev-page").click(function (event) {
     event.preventDefault();
     console.log("works");
@@ -107,12 +108,7 @@ function loopThroughContent() {
     setTestimonialMessage(currentIndex);
     setImageContent(currentIndex);
   });
-}
 
-function setTestimonialHeader(idx) {
-  let headerText = document.querySelector(".testimonial-header");
-  headerText.innerHTML = accomplishmentsParent[idx].header;
-}
 
 function setTestimonialName(idx) {
   let nameText = document.querySelector(".name-container");
@@ -136,6 +132,18 @@ function setImageContent(idx) {
   imageElement.style.backgroundRepeat = "fixed";
   $(".photo-content").text(`${imageArray[idx].description}`);
 }
+function windowSignIn() {
+window.addEventListener('load', function() {
+  /*If user login is Algebra display Algebra 
+  related elements on the page */
+  
+
+
+  console.log('page is fully loaded');
+
+})
+};
+windowSignIn()
 /*
 function setParentTestimonials(idx) {
   //let commentArr = accomplishmentsParent[idx];
@@ -158,6 +166,6 @@ function setParentTestimonials(idx) {
   parentCommentContainer.append(createMessageElement);
 }
 */
-loopThroughContent();
+
 //setParentTestimonials(0);
 //setTestimonialHeader(0);

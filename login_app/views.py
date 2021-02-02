@@ -32,6 +32,8 @@ def create_registration(request):
             first_name = request.POST['first_name'],
             last_name = request.POST['last_name'],
             email = request.POST['email'],
+            math = request.POST['math'],
+            grade = request.POST['grade'],
             password = pw_hash
         )
 
@@ -39,6 +41,8 @@ def create_registration(request):
         request.session['first_name']= new_user.first_name
         request.session['last_name']= new_user.last_name
         request.session['email']= new_user.email
+        request.session['grade']= new_user.grade
+        request.session['math']= new_user.math
         # context = {
         #     "new_user_added": Registration.objects.get(id=request.session['user_id'])
         # }
@@ -62,6 +66,8 @@ def login(request):
         request.session['first_name']= user.first_name
         request.session['last_name']=user.last_name
         request.session['email']= user.email
+        request.session['grade']= user.grade
+        request.session['math']= user.math
 
         #return render(request, "message_wall.html", context)
         return redirect('/courses') #change this redirect to the page you want to redirect
