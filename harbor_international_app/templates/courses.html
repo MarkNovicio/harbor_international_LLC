@@ -34,52 +34,90 @@
           <a id="log-out" href="/user/logout">log off</a>
         </div>
       </div>
-      <section class="course-container">
+      <section class="course-description-container">
         <div class="course-description">
           <p>
             Welcome {{user.first_name}}! You are signed up for {{user.math}}
           </p>
-        </div>
-        <div>
-          <p>Joined: {{user.created_at}}</p>
+          <div>
+            <p>Joined: {{user.created_at}}</p>
+          </div>
         </div>
       </section>
-      <section class="left-navigation-container">
-        <div></div>
-      </section>
-      <section class="video-container">
-        <div></div>
-      </section>
-
-      <section class="left-navigation-container">
-        {% if user.math == "Algebra" %}
-        <div class="algebra-container algebra">
-          <h2>{{user.math}}</h2>
-          <div>Algebra content 1</div>
-          <div>Algebra content 2</div>
-        </div>
-        {% elif user.math == "Geometry" %}
-        <div class="geometry-container geometry">
-          <h2>{{user.math}}</h2>
-          <div>Geometry Content 1</div>
-          <div>Geometry Content 2</div>
-        </div>
-        {% elif user.math == "Pre Algebra" %}
-        <div class="geometry-container geometry">
-          <h2>{{user.math}}</h2>
-          <div>Geometry Content 1</div>
-          <div>Geometry Content 2</div>
-        </div>
-        {% else %}
-        <div class="geometry-container geometry">
-          <h2>{{user.math}}</h2>
-          <div>Pre Calculus Content 1</div>
-          <div>Pre Calculus Content 2</div>
-        </div>
+      <section class="course-container">
+        <section class="left-navigation-container">
+          {% if user.math == "Algebra" %}
+          <div class="course-topic-container algebra">
+            <h2>{{user.math}}</h2>
+            <ul class="unit">
+              <span>Unit 1 Linear Functions</span>
+              <li class="topic">Functions and Patterns</li>
+              <li class="topic">Analyzing Linear Equations</li>
+            </ul>
+            <ul class="unit">
+              <span>Unit 2 Polynomial Functions</span>
+              <li class="topic topic-2">Polynomials</li>
+              <li class="topic topic-2">Factoring</li>
+              <li class="topic topic-2">Quadriatic Functions</li>
+            </ul>
+          </div>
+          {% elif user.math == "Geometry" %}
+          <div class="course-topic-container geometry">
+            <h2>{{user.math}}</h2>
+            <ul class="unit unit-1">
+              <span>Unit 1 Lines</span>
+              <li class="topic">Lines and Rays</li>
+              <li class="topic">Points, Lines, & Planes</li>
+            </ul>
+            <ul class="unit unit-2">
+              <span class="unit-2">Unit 2 Angles</span>
+              <li class="topic topic-2">Measuring Angles</li>
+              <li class="topic topic-2">Constructing Angels</li>
+              <li class="topic topic-2">Angle Types</li>
+            </ul>
+          </div>
+          <!--
+          {% elif user.math == "Pre Algebra" %}
+          <div class="course-topic-container pre-algebra">
+            <h2>{{user.math}}</h2>
+            <ul class="unit-1">
+              <span>Unit 1 Arithmetic Properties</span>
+              <li class="topic">Place Value</li>
+              <li class="topic">Order of Operations</li>
+            </ul>
+            <ul class="unit-2">
+              <span>Factors and Multiples</span>
+              <li class="topic topic-2">Divisibility Tests</li>
+              <li class="topic topic-2">Prime Numbers</li>
+              <li class="topic topic-2">Least Common Multiple</li>
+            </ul>
+          </div>
+          -->
+          {% else %}
+          <div class="course-topic-container calculus">
+            <h2>{{user.math}}</h2>
+            <ul class="unit-1">
+              <span>Unit 1 Limits and Continuity</span>
+              <li class="topic">Limits Intro</li>
+              <li class="topic">Squeeze Theorem</li>
+            </ul>
+            <ul class="unit-2">
+              <span>Derivatives</span>
+              <li class="topic topic-2">Secant Lines</li>
+              <li class="topic topic-2">Product Rule</li>
+              <li class="topic topic-2">Differentiability</li>
+            </ul>
+          </div>
+          {% endif %}
+        </section>
+        <section class="content-container">
+          {% if user.math == "Geometry" %}
+          <section class="content-container-geometry">
+            <h2>Functions and Patterns</h2>
+            <div></div>
+          </section>
+        </section>
         {% endif %}
-      </section>
-      <section class="content-container">
-
       </section>
     </div>
   </body>

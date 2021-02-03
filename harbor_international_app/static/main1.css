@@ -168,7 +168,70 @@ div.who-we-are-body-container p.text {
   font-size: 1.5em;
   text-align: justify;
 }
+.header-courses {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(87, 87, 87);
+  color: #fff;
+  padding: 5px 10px 20px 10px;
+  font-size: 1.2em;
+}
+.course-description {
+  display: flex;
+  justify-content: space-between;
+}
+#right-header {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+.course-description-container {
+  margin: 30px 0px;
+}
+.course-container {
+  display: flex;
+  justify-content: space-between;
+}
+.left-navigation-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  flex-direction: column;
+  background-color: rgb(18, 34, 46);
+  color: white;
 
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-bottom: 3rem;
+  width: 250px;
+}
+li.topic-2 {
+  display: none;
+}
+.course-topic-container h2 {
+  margin-bottom: 20px;
+}
+.course-topic-container .unit span {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.course-topic-container .unit .topic {
+  margin-left: 30px;
+  font-size: 1em;
+  list-style-type: none;
+}
+.course-topic-container div {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.content-container-geometry {
+  display: inline;
+}
 div.who-we-are-body-container img.world-map-image {
   margin-left: 180px;
   margin-right: 25px;

@@ -143,6 +143,31 @@ window.addEventListener('load', function() {
 
 })
 };
+function showContent(){
+  window.addEventListener('click', function(event){
+    if (event.target.classList.contains("unit-2")) {
+      for(let i=0; i<5; i++){
+      document.getElementsByClassName("topic-2")[i].style.display = "block"
+    }
+    }
+  },
+  false
+  );
+}
+function hideContent(){
+  window.addEventListener('click', function(event){
+    if (event.target.classList.contains("unit-2")) {
+      for(let i=0; i<5; i++){
+      document.getElementsByClassName("topic-2")[i].style.display = "block"
+    }
+    }
+  },
+  false
+  );
+}
+
+showContent()
+hideContent()
 windowSignIn()
 /*
 function setParentTestimonials(idx) {
