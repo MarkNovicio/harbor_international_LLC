@@ -65,15 +65,35 @@
           <div class="course-topic-container geometry">
             <h2>{{user.math}}</h2>
             <ul class="unit unit-1">
-              <span>Unit 1 Lines</span>
+              <span
+                ><img
+                  class="plus-svg-image"
+                  src="{% static '../static/images/plus_svg.svg' %}"
+                />
+                <img
+                  class="minus-svg-image"
+                  src="{% static '../static/images/minus_svg.svg' %}"
+                />
+                Unit 1 Lines</span
+              >
               <li class="topic">Lines and Rays</li>
               <li class="topic">Points, Lines, & Planes</li>
             </ul>
             <ul class="unit unit-2">
-              <span class="unit-2">Unit 2 Angles</span>
+              <span class="unit-2">
+                <img
+                  class="plus-svg-image"
+                  src="{% static '../static/images/plus_svg.svg' %}"
+                />
+                <img
+                  class="minus-svg-image minus-svg-image-unit2"
+                  src="{% static '../static/images/minus_svg.svg' %}"
+                />Unit 2 Angles</span
+              >
               <li class="topic topic-2">Measuring Angles</li>
               <li class="topic topic-2">Constructing Angels</li>
               <li class="topic topic-2">Angle Types</li>
+              <li class="topic topic-2">Arc Types</li>
             </ul>
           </div>
           <!--
@@ -116,8 +136,9 @@
             <h2>Functions and Patterns</h2>
             <div></div>
           </section>
+          {% endif %}
         </section>
-        {% endif %}
+        
       </section>
     </div>
   </body>

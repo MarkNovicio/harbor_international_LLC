@@ -143,31 +143,49 @@ window.addEventListener('load', function() {
 
 })
 };
+
 function showContent(){
   window.addEventListener('click', function(event){
-    if (event.target.classList.contains("unit-2")) {
-      for(let i=0; i<5; i++){
+    
+    if (event.target.classList.contains("plus-svg-image")) {
+      listLength= document.querySelectorAll(".unit li")
+    console.log(listLength)
+      for(let i=0; i<listLength.length-2; i++){
       document.getElementsByClassName("topic-2")[i].style.display = "block"
+      
     }
+    console.log("worked")
+
+    document.getElementsByClassName("plus-svg-image")[1].style.display = "none"
+    document.getElementsByClassName("minus-svg-image")[1].style.display = "inline"
     }
   },
   false
   );
 }
+showContent()
+
 function hideContent(){
   window.addEventListener('click', function(event){
-    if (event.target.classList.contains("unit-2")) {
-      for(let i=0; i<5; i++){
-      document.getElementsByClassName("topic-2")[i].style.display = "block"
+    
+    if (event.target.classList.contains("minus-svg-image")) {
+      listLength= document.querySelectorAll(".unit li")
+    console.log(listLength)
+      for(let i=0; i<listLength.length-2; i++){
+      document.getElementsByClassName("topic-2")[i].style.display = "none"
+      
     }
+    console.log("worked")
+    
+    document.getElementsByClassName("minus-svg-image")[1].style.display = "none"
+    document.getElementsByClassName("plus-svg-image")[1].style.display = "inline"
     }
   },
   false
   );
 }
-
-showContent()
 hideContent()
+
 windowSignIn()
 /*
 function setParentTestimonials(idx) {
