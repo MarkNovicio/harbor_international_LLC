@@ -45,7 +45,9 @@
         </div>
       </section>
       <section class="about">
-        <p>We are a non-profit organization is structured to develop a child's</p>
+        <p>
+          We are a non-profit organization is structured to develop a child's
+        </p>
         <ol>
           <li>Learning Confidence</li>
           <li>Study Habits</li>
@@ -104,6 +106,23 @@
       <section class="enter">
         <a href="/user/signup"><p id="enter-container">SIGN UP</p></a>
       </section>
+      <div class="mt-5">
+        <form action="." method="post" enctype="multipart/form-data">
+          {% csrf_token %} {{form.as_p}}
+          <button class="btn btn-success btn-lg">Upload</button>
+        </form>
+      </div>
+      <div class="container">
+        {% for x in all %}
+        <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
+        <video
+          class="embed-responsive embed-responsive-16by9"
+          controls="controls"
+        >
+          <source src="{{x.video.url}}" type="video/mp4" />
+        </video>
+        {% endfor %}
+      </div>
       <footer class="index">
         <p>Some Text</p>
       </footer>
