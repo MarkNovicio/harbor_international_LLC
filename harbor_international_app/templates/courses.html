@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Harbor International LLC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% load static %}
+    {% load static %} {% load embed_video_tags %}
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
       rel="stylesheet"
@@ -64,6 +64,7 @@
           {% elif user.math == "Geometry" %}
           <div class="course-topic-container geometry">
             <h2>{{user.math}}</h2>
+
             <ul class="unit unit-1">
               <span
                 ><img
@@ -76,8 +77,13 @@
                 />
                 Unit 1 Lines</span
               >
-              <li class="topic">Lines and Rays</li>
-              <li class="topic">Points, Lines, & Planes</li>
+              {% for course in geometriesUnit1 %}
+              <li class="topic">
+                <a href="/courses/{{course.id}}/geometry">
+                  {{course.caption}} 1.{{course.id}}</a
+                >
+              </li>
+              {% endfor %}
             </ul>
             <ul class="unit unit-2">
               <span class="unit-2">
@@ -90,10 +96,13 @@
                   src="{% static '../static/images/minus_svg.svg' %}"
                 />Unit 2 Angles</span
               >
-              <li class="topic topic-2">Measuring Angles</li>
-              <li class="topic topic-2">Constructing Angels</li>
-              <li class="topic topic-2">Angle Types</li>
-              <li class="topic topic-2">Arc Types</li>
+              {% for course in geometriesUnit2 %}
+              <li class="topic topic-2">
+                <a href="/courses/{{course.id}}/geometry">
+                  {{course.caption}} 2.{{course.id}}</a
+                >
+              </li>
+              {% endfor %}
             </ul>
           </div>
 
@@ -133,20 +142,16 @@
         <section class="content-container">
           {% if user.math == "Geometry" %}
           <section class="content-container-geometry">
-            <h2>Functions and Patterns</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-               </p>
-          </section>
-          {% endif %}
-        </section>
-        <section class="video-container">
-          {% if user.math == "Geometry" %}
-          <section class="content-container-geometry">
-            <h2>Videos</h2>
-            <div class=></div>
+            <h2>GEOMETRY</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
           </section>
           {% endif %}
         </section>

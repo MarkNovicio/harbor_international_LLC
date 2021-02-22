@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Harbor International LLC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %} {% load embed_video_tags %}
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '../static/main1.css' %}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src=" {% static '../static/js/main1.js' %}"></script>
+    <script
+      src="https://kit.fontawesome.com/c84a7e6fa4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header-courses">
+        <div id="left-header">Harbor International</div>
+        <div id="right-header">
+          <p class="user">Signed in as {{user.email}}</p>
+          <p class="user">|</p>
+          <a id="log-out" href="/user/logout">log off</a>
+        </div>
+      </div>
+      <section class="course-description-container">
+        <div class="course-description">
+          <p>
+            Welcome {{user.first_name}}! You are signed up for {{user.math}}
+          </p>
+          <div>
+            <p>Joined: {{user.created_at}}</p>
+          </div>
+        </div>
+      </section>
+      <section class="course-container">
+        <section class="left-navigation-container">
+          {% if user.math == "Algebra" %}
+          <div class="course-topic-container algebra">
+            <h2>{{user.math}}</h2>
+            <ul class="unit">
+              <span>Unit 1 Linear Functions</span>
+              <li class="topic">Functions and Patterns</li>
+              <li class="topic">Analyzing Linear Equations</li>
+            </ul>
+            <ul class="unit">
+              <span>Unit 2 Polynomial Functions</span>
+              <li class="topic topic-2">Polynomials</li>
+              <li class="topic topic-2">Factoring</li>
+              <li class="topic topic-2">Quadriatic Functions</li>
+            </ul>
+          </div>
+          {% elif user.math == "Geometry" %}
+          <div class="course-topic-container geometry">
+            <h2>{{user.math}}</h2>
+
+            <ul class="unit unit-1">
+              <span
+                ><img
+                  class="plus-svg-image"
+                  src="{% static '../static/images/plus_svg.svg' %}"
+                />
+                <img
+                  class="minus-svg-image"
+                  src="{% static '../static/images/minus_svg.svg' %}"
+                />
+                Unit 1 Lines</span
+              >
+              {% for course in geometriesUnit1 %}
+              <li class="topic">
+                <a href="/courses/{{course.id}}/geometry">
+                  {{course.caption}} 1.{{course.id}}</a
+                >
+              </li>
+              {% endfor %}
+            </ul>
+            <ul class="unit unit-2">
+              <span class="unit-2">
+                <img
+                  class="plus-svg-image"
+                  src="{% static '../static/images/plus_svg.svg' %}"
+                />
+                <img
+                  class="minus-svg-image minus-svg-image-unit2"
+                  src="{% static '../static/images/minus_svg.svg' %}"
+                />Unit 2 Angles</span
+              >
+              {% for course in geometriesUnit2 %}
+              <li class="topic topic-2">
+                <a href="/courses/{{course.id}}/geometry">
+                  {{course.caption}} 2.{{course.id}}</a
+                >
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          {% elif user.math == "Pre Algebra" %}
+          <div class="course-topic-container pre-algebra">
+            <h2>{{user.math}}</h2>
+            <ul class="unit-1">
+              <span>Unit 1 Arithmetic Properties</span>
+              <li class="topic">Place Value</li>
+              <li class="topic">Order of Operations</li>
+            </ul>
+            <ul class="unit-2">
+              <span>Factors and Multiples</span>
+              <li class="topic topic-2">Divisibility Tests</li>
+              <li class="topic topic-2">Prime Numbers</li>
+              <li class="topic topic-2">Least Common Multiple</li>
+            </ul>
+          </div>
+
+          {% else %}
+          <div class="course-topic-container calculus">
+            <h2>{{user.math}}</h2>
+            <ul class="unit-1">
+              <span>Unit 1 Limits and Continuity</span>
+              <li class="topic">Limits Intro</li>
+              <li class="topic">Squeeze Theorem</li>
+            </ul>
+            <ul class="unit-2">
+              <span>Derivatives</span>
+              <li class="topic topic-2">Secant Lines</li>
+              <li class="topic topic-2">Product Rule</li>
+              <li class="topic topic-2">Differentiability</li>
+            </ul>
+          </div>
+          {% endif %}
+        </section>
+        <section class="content-container">
+          {% if user.math == "Geometry" %}
+          <section class="content-container-geometry">
+            {% for geometry in geometry %}
+            <h2>{{geometry.caption}}</h2>
+            <p>{{geometry.content}}</p>
+            <video width="400" controls>
+              <source src="/media/{{geometry.videofile}}" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            {% endfor %}
+          </section>
+          {% endif %}
+        </section>
+      </section>
+    </div>
+  </body>
+</html>

@@ -206,7 +206,7 @@ div.who-we-are-body-container p.text {
   padding-top: 2rem;
   padding-left: 1rem;
   padding-bottom: 3rem;
-  width: 250px;
+  width: 720px;
 }
 li.topic-2 {
   display: none;
@@ -242,8 +242,13 @@ img.plus-svg-image,
   margin-bottom: 10px;
 }
 
+.content-container {
+  margin-left: 80px;
+}
+
 .content-container-geometry {
   display: inline;
+  margin-left: 80px;
 }
 div.who-we-are-body-container img.world-map-image {
   margin-left: 180px;
