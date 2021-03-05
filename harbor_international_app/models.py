@@ -14,14 +14,14 @@ class Video(models.Model):
 
 class Algebra(models.Model):
     caption = models.CharField(max_length=50)
-    content= models.CharField(max_length=3000)
+    content= models.TextField(max_length=3000)
     videofile =models.FileField(upload_to="algebra/", null=True, verbose_name="")
     def __str__(self):
         return self.caption + ":" + str(self.videofile)
 
 class Geometry(models.Model):
     caption = models.CharField(max_length=50)
-    content= models.CharField(max_length=3000)
+    content= models.TextField(max_length=3000)
     videofile =models.FileField(upload_to="geometry/", null=True, verbose_name="")
     def __str__(self):
         return self.caption + ":" + str(self.videofile)

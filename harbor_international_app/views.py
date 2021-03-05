@@ -81,11 +81,16 @@ def geometry_material(request, course_id):
     return render(request, "material.html", context)
 
 def delete_video(request, video_id):
-    delete_ = Snack.objects.get(id=snack_id)
-    if delete_snack.publisher.id == request.session['user_id']:
-        delete_snack.delete()
+    delete_video = Video.objects.get(id=video_id)
+    delete_video.delete()
 
-    return redirect('/snacks')
+    return redirect('/upload/video')
+
+def delete_geometry_content(request, video_id):
+    delete_video = Geometry.objects.get(id=video_id)
+    delete_video.delete()
+
+    return redirect('/upload/video')
 def admin(request):
     def create_registration(request):
         if request.method == 'GET':

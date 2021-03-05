@@ -59,6 +59,7 @@ def login(request):
     if not User.objects.authenticate(request.POST['email'], request.POST['password']):
         signin_messages.error(request, 'Invalid email/password')
         return redirect('/user/signup')
+   
     else:
         logged_users = User.objects.filter(email=request.POST['email'])
         user = logged_users[0]

@@ -1,16 +1,10 @@
-d<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Upload Videos</title>
   </head>
   <body>
-    <h1>Video Uploader</h1>
-    <form enctype="multipart/form-data" method="POST" action="/upload/video">
-      {% csrf_token %} {{ form.as_p }}
-      <input type="submit" value="Upload" />
-    </form>
-
     <h1>Algebra Uploader</h1>
     <form enctype="multipart/form-data" method="POST" action="/upload/algebra">
       {% csrf_token %} {{ form.as_p }}
@@ -24,24 +18,20 @@ d<!DOCTYPE html>
     </form>
 
     <br /><br />
-    {% for video in videos %}
-    <video width="400" controls>
-      <source src="/media/{{video.videofile}}" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    {% endfor %} {% for video in geometry %}
-    <p>{{video.caption}}</p>
-    <p>{{video.content}}</p>
-    <video width="400" controls>
-      <source src="/media/{{video.videofile}}" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    {% if request.session.user_id == 'admin' %}
-        <button><a href="/videos/{video.id}}/delete">Delete</a></button>
-        {% endif %}
-    {% endfor %}
+    {% for video in geometry %}
+    <ul>
+      <li>
+        <p>{{video.caption}}</p>
+        <p>{{video.content}}</p>
+        <video width="400" controls>
+          <source src="/media/{{video.videofile}}" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
-    <br /><br />
+        <button><a href="/videos/{{video.id}}/delete_geometry">Delete</a></button>
+      </li>
+    </ul>
+    {% endfor %}
   </body>
   <script>
     "undefined" === typeof _trfq || (window._trfq = []);
