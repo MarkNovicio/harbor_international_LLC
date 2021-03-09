@@ -147,7 +147,7 @@ window.addEventListener('load', function() {
 function showContent(){
   window.addEventListener('click', function(event){
     
-    if (event.target.classList.contains("plus-svg-image")) {
+    if (event.target.classList.contains("plus-svg-image") || (event.target.classList.contains("topic-2"))) {
       listLength= document.querySelectorAll(".unit li")
     console.log(listLength)
       for(let i=0; i<listLength.length-2; i++){
@@ -159,11 +159,16 @@ function showContent(){
     document.getElementsByClassName("plus-svg-image")[1].style.display = "none"
     document.getElementsByClassName("minus-svg-image")[1].style.display = "inline"
     }
+
   },
   false
   );
 }
 showContent()
+
+function pageLoad() {
+  window.onload
+}
 
 function hideContent(){
   window.addEventListener('click', function(event){

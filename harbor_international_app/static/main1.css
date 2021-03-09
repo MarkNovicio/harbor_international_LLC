@@ -13,6 +13,28 @@ div.overlap-container {
     fixed;
   background-size: cover;
 }
+
+div.carousel-container {
+  background: url(/static/images/blackboard.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+section.about {
+  margin: 100px;
+  background-color: rgba(219, 219, 219, 0.6);
+}
+
+.carousel-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: rgb(126, 125, 125);
+  text-align: center;
+}
+
+.carousel-inner {
+  height: 85px;
+  font-size: 1.5em;
+  color: #fff;
+}
 div.who-we-are-container {
   background-color: rgba(94, 94, 94, 0.6);
   z-index: 2;
@@ -92,11 +114,10 @@ ul.subjects-taught {
 }
 
 li.subjects-taught-item {
+  text-align: center;
   list-style-type: none;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  border: 3px solid #000;
   margin: 10px;
   font-weight: bold;
   display: flex;
@@ -132,12 +153,13 @@ li.subjects-taught-item:hover {
   -moz-transition: background-color 1s ease;
   -o-transition: background-color 1s ease;
   transition: background-color 1s ease;
-  background-color: rgba(86, 178, 231, 0.3);
+
   /*font-size: 20px;*/
 }
 li.subjects-taught-item p:hover {
   font-size: 1.8em;
   font-weight: bolder;
+  color: rgb(1, 78, 150);
 }
 footer.index {
   height: 200px;
@@ -202,15 +224,19 @@ div.who-we-are-body-container p.text {
   flex-direction: column;
   background-color: rgb(240, 240, 240);
   color: rgb(49, 49, 49);
+  width: 50%;
 
   padding-top: 2rem;
   padding-left: 1rem;
   padding-bottom: 3rem;
   width: 720px;
 }
+/*
 li.topic-2 {
   display: none;
 }
+*/
+
 .course-topic-container h2 {
   margin-bottom: 20px;
 }
@@ -367,4 +393,13 @@ div.photo-content {
   font-size: 1.9em;
   position: relative;
   bottom: 0px;
+}
+
+.topic-content {
+  margin: 40px 0px;
+}
+
+.video-content {
+  display: flex;
+  justify-content: center;
 }

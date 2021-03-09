@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     {% block title %}
     <title>Harbor International LLC</title>
     {% endblock %}
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% load static %}
@@ -13,15 +16,17 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       type="text/css"
       href="{% static '../static/main1.css' %}"
     />
-    <script src=" {% static '../static/js/main1.js' %}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   </head>
 
   <body>
@@ -46,15 +51,96 @@
         </div>
       </section>
       <section class="about">
-        <p>
-          We are a non-profit organization is structured to develop a child's
-        </p>
-        <ol>
-          <li>Learning Confidence</li>
-          <li>Study Habits</li>
-          <li>Critical Thinking</li>
-          <li>Learning Techniques</li>
-        </ol>
+        <div class="carousel-container">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="d-flex h-100 align-items-center justify-content-center">
+              <p class="carousel-title">
+                We are a non-profit organization structured to develop a
+                student's
+              </p>
+            </div>
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="3"
+              ></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div
+                  class="d-flex h-100 align-items-center justify-content-center"
+                >
+                  <p class="carousel-text">Study Habits</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div
+                  class="d-flex h-100 align-items-center justify-content-center"
+                >
+                  <p>Critical Thinking</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div
+                  class="d-flex h-100 align-items-center justify-content-center"
+                >
+                  <p>Learning Techniques</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div
+                  class="d-flex h-100 align-items-center justify-content-center"
+                >
+                  <p>Learning Confidence</p>
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <a href="https://www.freepik.com/photos/pattern"
+            >photo by jcomp</a
+          >
+        </div>
       </section>
       <section class="subjects-taught-container">
         <ul class="subjects-taught">
@@ -70,6 +156,9 @@
           <li class="science subjects-taught-item">
             <p>PROBLEM SOLVING</p>
           </li>
+          <li class="science subjects-taught-item">
+            <p>ACUITY</p>
+          </li>
         </ul>
         <div class="mid-section">
           <div>
@@ -82,7 +171,7 @@
             <p>ENCOURAGEMENT</p>
           </li>
           <li class="science subjects-taught-item">
-            <p>PROBLEM SOLVING</p>
+            <p>LEADERSHIP</p>
           </li>
           <li class="science subjects-taught-item">
             <p>COMMUNICATION</p>
@@ -91,23 +180,32 @@
             <p>ENGAGMENT</p>
           </li>
         </ul>
-
-        <ul class="subjects-taught">
-          <li class="science subjects-taught-item">
-            <p>ACUITY</p>
-          </li>
-          <li class="science subjects-taught-item">
-            <p>CONFIDENCE</p>
-          </li>
-          <li class="science subjects-taught-item">
-            <p>LEADERSHIP</p>
-          </li>
-        </ul>
       </section>
       <section class="enter">
         <a href="/user/signup"><p id="enter-container">SIGN UP</p></a>
       </section>
     </div>
+    <!--  Optional JS-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src=" {% static '../static/js/main1.js' %}"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   </body>
 </html>
 
