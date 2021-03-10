@@ -15,12 +15,7 @@ div.overlap-container {
 }
 
 div.carousel-container {
-  background: url(/static/images/blackboard.jpg) no-repeat center center fixed;
-  background-size: cover;
-}
-section.about {
-  margin: 100px;
-  background-color: rgba(219, 219, 219, 0.6);
+  margin-bottom: 150px;
 }
 
 .carousel-title {
