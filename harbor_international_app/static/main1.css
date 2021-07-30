@@ -398,3 +398,16 @@ div.photo-content {
   display: flex;
   justify-content: center;
 }
+
+#log-out {
+  color: white;
+  text-decoration: none;
+}
+
+.user {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#left-header {
+  font-size: 1.3em;
+}

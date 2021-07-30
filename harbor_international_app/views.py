@@ -60,7 +60,6 @@ def courses(request):
 
         context = {
             "user": User.objects.get(id = request.session['user_id']),
-            'videos': Video.objects.all(),
             'algebra': Algebra.objects.all(),
             'geometriesUnit1': Geometry.objects.filter(id__gt=0, id__lt=3),
             'geometriesUnit2': Geometry.objects.filter(id__gt=2, id__lt=6)
@@ -71,6 +70,8 @@ def courses(request):
     else:
         return redirect('/user/signup') #login page
 
+
+
 def geometry_material(request, course_id):
     context = {
         "user": User.objects.get(id = request.session['user_id']),
@@ -79,6 +80,8 @@ def geometry_material(request, course_id):
         'geometry': Geometry.objects.filter(id=course_id)
     }
     return render(request, "material.html", context)
+
+
 
 def delete_video(request, video_id):
     delete_video = Video.objects.get(id=video_id)
